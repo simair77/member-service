@@ -35,11 +35,6 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public MemberDto createMember(MemberDto memberDto) {
 
-        //Email 중복체크
-        if (memberRepository.findByEmail(memberDto.getEmail()) != null) {
-            throw new UserDetails. (memberDto.getEmail());
-        }
-        UserDetails
         memberDto.setMemberId(UUID.randomUUID().toString());
         ModelMapper mapper = new ModelMapper();
         mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
